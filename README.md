@@ -15,4 +15,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-[![Anirban's GitHub stats](https://github-readme-stats.vercel.app/api?username=anirbanbasu&count_private=true&show_icons=true?&include_all_commits=true&show_owner=true)](https://github.com/anuraghazra/github-readme-stats)
+[![My GitHub statistics](https://github-readme-stats.vercel.app/api?username=anirbanbasu&count_private=true&show_icons=true?&include_all_commits=true&show_owner=true&title_color=D08770&text_color=5E81AC&icon_color=A3BE8C&bg_color=FFFFFF&border_color=B48EAD&custom_title=My%20Github%20statistics)](https://github.com/anuraghazra/github-readme-stats)
