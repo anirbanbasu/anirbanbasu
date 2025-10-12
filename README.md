@@ -15,12 +15,10 @@ Here are some ideas to get you started:
 - 😄 Pronouns: he/him
 - ⚡ Fun fact: ...
 -->
-<!--
-![GitHub statistics](https://github-readme-stats.vercel.app/api?username=anirbanbasu&count_private=true&show_icons=true?&include_all_commits=true&show_owner=true)
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=anirbanbasu&theme=nord&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&mode=weekly)
-
--->
 
 ![Languages used](https://github-readme-stats.vercel.app/api/top-langs?username=anirbanbasu&show_icons=true&locale=en&layout=compact)
-
+<!--
+![GitHub statistics](https://github-readme-stats.vercel.app/api?username=anirbanbasu&locale=en&count_private=true&show=reviews,discussions_started,discussions_answered,prs_merged&rank_icon=github&theme=nord)
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=anirbanbasu&theme=nord&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&mode=weekly)
+-->
 
