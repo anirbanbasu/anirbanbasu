@@ -10,29 +10,48 @@ jobs:
     permissions:
       contents: write
     steps:
+      # Basic account metrics (header, activity, community, repositories)
       - uses: lowlighter/metrics@latest
         with:
-          filename: github-metrics.svg
+          filename: metrics/profile.svg
           token: ${{ secrets.METRICS_TOKEN }}
           user: anirbanbasu
           template: classic
-
-          # Basic account metrics (header, activity, community, repositories)
+          config_timezone: Asia/Tokyo
           base: "header, activity, community, repositories"
 
-          # Detailed language breakdown
+      # Detailed language breakdown
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/languages.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: anirbanbasu
+          template: classic
+          config_timezone: Asia/Tokyo
+          base: ""
           plugin_languages: yes
           plugin_languages_details: percentage
           plugin_languages_limit: 8
           plugin_languages_threshold: 0%
 
-          # Repository licenses
-          plugin_licenses: yes
-          plugin_licenses_target: all
+      # Lines of code added/removed across repositories
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/lines.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: anirbanbasu
+          template: classic
+          config_timezone: Asia/Tokyo
+          base: ""
+          plugin_lines: yes
 
-          # Coding habits
-          plugin_habits: yes
-          plugin_habits_charts: yes
-          plugin_habits_facts: yes
-          plugin_habits_days: 14
-          plugin_habits_from: 200
+      # Follow-up on issues and pull requests
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/followup.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: anirbanbasu
+          template: classic
+          config_timezone: Asia/Tokyo
+          base: ""
+          plugin_followup: yes
