@@ -22,8 +22,5 @@ Here are some ideas to get you started:
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=anirbanbasu&theme=nord&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&mode=weekly)
 -->
 
-<img src="/metrics/profile.svg" alt="GitHub profile metrics" />
-<img src="/metrics/languages.svg" alt="Language breakdown" />
-<img src="/metrics/lines.svg" alt="Lines of code changed" />
-<img src="/metrics/followup.svg" alt="Issue and pull request follow-up" />
+<img src="/lowlighter-metrics.svg" alt="GitHub metrics" />
 
