@@ -11,8 +11,7 @@ jobs:
       contents: write
     steps:
       # Basic account metrics (header, activity, community, repositories)
-      - if: false # temporarily disabled for languages debug run
-        uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@latest
         with:
           filename: metrics/profile.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -20,6 +19,7 @@ jobs:
           template: classic
           config_timezone: Asia/Tokyo
           base: "header, activity, community, repositories"
+          repositories_batch: 40
 
       # Detailed language breakdown
       - uses: lowlighter/metrics@latest
@@ -36,11 +36,9 @@ jobs:
           plugin_languages_limit: 8
           plugin_languages_threshold: 0%
           plugin_languages_ignored: html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot
-          debug: yes
 
       # Lines of code added/removed across repositories
-      - if: false # temporarily disabled for languages debug run
-        uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@latest
         with:
           filename: metrics/lines.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -48,11 +46,11 @@ jobs:
           template: classic
           config_timezone: Asia/Tokyo
           base: ""
+          repositories_batch: 40
           plugin_lines: yes
 
       # Follow-up on issues and pull requests
-      - if: false # temporarily disabled for languages debug run
-        uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@latest
         with:
           filename: metrics/followup.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -60,4 +58,5 @@ jobs:
           template: classic
           config_timezone: Asia/Tokyo
           base: ""
+          repositories_batch: 40
           plugin_followup: yes
