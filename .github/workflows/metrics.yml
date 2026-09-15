@@ -1,0 +1,38 @@
+name: Metrics
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */12 * * *"
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: github-metrics.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: anirbanbasu
+          template: classic
+
+          # Basic account metrics (header, activity, community, repositories)
+          base: "header, activity, community, repositories"
+
+          # Detailed language breakdown
+          plugin_languages: yes
+          plugin_languages_details: percentage
+          plugin_languages_limit: 8
+          plugin_languages_threshold: 0%
+
+          # Repository licenses
+          plugin_licenses: yes
+          plugin_licenses_target: all
+
+          # Coding habits
+          plugin_habits: yes
+          plugin_habits_charts: yes
+          plugin_habits_facts: yes
+          plugin_habits_days: 14
+          plugin_habits_from: 200
